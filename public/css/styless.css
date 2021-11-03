@@ -1,0 +1,18 @@
+body {
+    font-family: roboto
+}
+
+p{
+    font-size: 12px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.precio {
+    font-size: 18px
+}
+.descuento{
+    font-size: 16px;
+}
