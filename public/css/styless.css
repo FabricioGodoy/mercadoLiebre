@@ -1,5 +1,6 @@
 body {
-    font-family: roboto
+    font-family: roboto;
+    background-color: #EAC926;
 }
 
 p{
@@ -15,4 +16,9 @@ h2 {
 }
 .descuento{
     font-size: 16px;
+}
+.burguer-menu{
+font-color: #03264C;
+   font-size: 25px;
+   text-align: center;
 }
