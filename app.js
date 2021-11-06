@@ -1,13 +1,13 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
 const app = express();
- const publicPath = path.resolve(__dirname, './public')
- app.use(express.static(publicPath));
+const path = require("path");
+const port = 3030;
+app.use(express.static("public"));
 
-app.get('/', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, './views/home.html'))
-})
+app.listen(port, () => {
+  console.log(`escuchando en http://localhost:${port}`);
+});
 
-app.listen(3000, () => {
-    console.log('servidor corriendo en el puerto 3000');
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/home.html"));
 });
