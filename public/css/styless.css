@@ -3,7 +3,8 @@
     font-size: 12px;
     color: black;
     margin: 0;
-  }
+    background-color: #ebebeb;
+      }
   
   .imagen{
     margin: 0;
@@ -71,3 +72,15 @@
   section{
     text-align: center;
   }
+  article{
+    padding:15px;
+    margin-top: 10px;
+    background-color:white;
+  }
+ .caja{
+ border-top: solid 1px #ebebeb;
+ }
+ main{
+  text-align: center;
+  width: 90%;
+ }
