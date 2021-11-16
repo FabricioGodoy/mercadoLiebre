@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +12,7 @@
     <link href="/css/styless.css" rel="stylesheet">
     <title>Mercado Liebre</title>
 </head>
+
 <body>
     <header>
         <div class="nav-top-bar">
@@ -21,12 +23,15 @@
                 <input type="text" placeholder="Buscar productos, marcas y más...">
                 <i class="fas fa-search"></i>
             </section>
+        </div>
+        <div>
             <section class="tarjetas-cuotas">
                 <i class="fas fa-hand-holding-usd"></i>
                 <p>Comprá en cuotas y sin tarjeta de crédito</p>
             </section>
         </div>
 
+        </div>
         <nav>
             <ul class="left-nav-bar">
                 <li><a href="#">Ofertas</a></li>
@@ -35,20 +40,51 @@
                 <li><a href="#">Ayuda</a></li>
             </ul>
             <ul class="rigth-nav-bar">
-                <li><a href="#">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
-                <li><a href="#">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="/register">Creá tu cuenta</a><i class="far fa-id-card"></i></li>
+                <li><a href="/login">Ingresá</a><i class="fas fa-sign-in-alt"></i></li>
                 <li><a href="#">Mis compras</a><i class="fas fa-shopping-basket"></i></li>
             </ul>
             <div class="burger-menu">
                 <i class="fas fa-bars"></i>
-                </div>
+            </div>
         </nav>
     </header>
+
+    <form action="/crear-producto" method="post" class="formulario">
+        <div class="contenedorFormulario">
+            <label>Nombre del producto:</label>
+            <input type="text" name="nombre" class="control">
+        </div>
+        <div class="contenedorFormulario">
+            <label>Precio del producto:</label>
+            <input type="text" name="precio" class="control">
+        </div>
+        <div class="contenedorFormulario">
+            <label>Categoría:</label>
+            <select name="categoria" class="control">
+                <option value="hogar">Hogar</option>
+                <option value="electro">Electro</option>
+                <option value="indumentaria">Indumentaria</option>
+            </select>
+        </div>
+        <div class="contenedorFormulario">
+            <label>Descripcion:</label>
+            <textarea name="descripcion" class="control"> </textarea>
+        </div>
+        <div class="contenedorFormulario">
+            <label>Esta en oferta:</label>
+            <input type="radio" name="enOferta">Si
+            <input type="radio" name="enOferta">No
+        </div>
+        <button type="reset" class="botonFormulario">Borrar</button>
+        <button type="submit" class="botonFormulario">Guardar</button>
+
+    </form>
     <secion class="banner">
         <img src="/images/img-home-banner.jpg" width="100%" alt="Banner promocional">
     </secion>
     <main class="contenedor">
-        
+
         <section class="recomendados">
             <h2>Basado en tu última visita</h2>
             <article class="producto">
@@ -86,15 +122,15 @@
             </article>
             <article class="producto">
                 <img src="/images/img-tv-samsung-smart.jpg" width="100%" alt="SmartTv Samsung 43"">
-                <section class="info-producto">
-                    <i class="fas fa-truck"></i>
-                    <section class="info-precio">
-                        <p class="precio">$23.200</p>
-                        <p class="descuento">10% OFF</p>
-                    </section>
-                    <h4 class="descripcion">Samsung Galaxy S10</h4>
+                <section class=" info-producto">
+                <i class="fas fa-truck"></i>
+                <section class="info-precio">
+                    <p class="precio">$23.200</p>
+                    <p class="descuento">10% OFF</p>
                 </section>
-            </article>
+                <h4 class="descripcion">Samsung Galaxy S10</h4>
+        </section>
+        </article>
         </section>
         <section class="ofertas">
             <h2>Sección de ofertas</h2>
@@ -133,15 +169,15 @@
             </article>
             <article class="producto">
                 <img src="/images/img-tv-samsung-smart.jpg" width="100%" alt="SmartTv Samsung 43"">
-                <section class="info-producto">
-                    <i class="fas fa-truck"></i>
-                    <section class="info-precio">
-                        <p class="precio">$23.200 </p>
-                        <p class="descuento">10% OFF</p>
-                    </section>
-                    <h4 class="descripcion">Samsung Galaxy S10</h4>
-                   </section>
-            </article>
+                <section class=" info-producto">
+                <i class="fas fa-truck"></i>
+                <section class="info-precio">
+                    <p class="precio">$23.200 </p>
+                    <p class="descuento">10% OFF</p>
+                </section>
+                <h4 class="descripcion">Samsung Galaxy S10</h4>
+        </section>
+        </article>
         </section>
     </main>
     <footer>
@@ -166,4 +202,5 @@
         <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
     </footer>
 </body>
+
 </html>
