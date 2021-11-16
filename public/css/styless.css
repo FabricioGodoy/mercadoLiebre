@@ -64,17 +64,18 @@ h2 {
 
 .tarjetas-cuotas {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   text-align: center;
   padding: 10px;
 }
 .tarjetas-cuotas p {
-  display: inline;
+  display: block;
   margin: 0px 5px;
 }
 .left-nav-bar,
 .rigth-nav-bar {
   display: none;
+  gap: 1rem;
 }
 nav ul {
   padding: 0;
@@ -98,33 +99,68 @@ nav ul li a {
   padding: 7px;
   border-radius: 3px;
 }
+
+.formularioCrearUsiario,
+.formularioInicioSesion {
+  padding: 5px 10px;
+  text-align: left;
+  border: 3px solid #eac926;
+  background-color: #ebebeb;
+  width: 100vw;
+}
+
+.contenedorFormularioUsuarios,
+.contenedorFormularioLogin,
+.contenedorFormularioUsuariosCheckbox,
+.contenedorFormularioUsuariosFoto{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center   ;
+  width: auto;  
+  padding: 4px;
+}
+.contenedorFormularioUsuarios input,
+.contenedorFormularioLogin input {
+  width: 50vw;
+  border-radius: none;
+}
+.contenedorFormularioUsuarios input:focus,
+.contenedorFormularioLogin input:focus {
+  color: black;
+  border: 5px solid #eac926;
+}
+.contenedorFormularioUsuarios label,
+.contenedorFormularioLogin label,
+.contenedorFormularioUsuariosCheckbox label,
+.contenedorFormularioUsuariosFoto label {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 550;
+  display: block;
+}
+.contenedorFormularioUsuarios input,
+.contenedorFormularioLogin input {
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+.botonFormUsuario {
+  background-color: #1259c3;
+  border: none;
+  font-size: 15px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5px auto;
+}
+
 .contenedor {
   padding: 10px;
   margin: auto;
   width: 90%;
-}
-.formulario {
-  padding: 20px 15px;
-}
-.contenedorFormulario {
-  margin-bottom: 15px;
-}
-.contenedorFormulario label {
-  margin-bottom: 15px;
-  font-style: italic;
-  display: block;
-}
-.control {
-  width: 100%;
-  padding: 8px;
-}
-.botonFormulario {
-  background-color: #39b54a;
-  border: none;
-  font-size: 20px;
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 10px;
 }
 .recomendadados {
   margin: 20px 0px;
@@ -221,8 +257,14 @@ section.icon-footer {
   .logo {
     max-width: 150px;
   }
+  .left-nav-bar,
+  .rigth-nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
-@media (min-width: 769px) {
+  @media (min-width: 769px) {
   header {
     padding: 10px 50px;
   }
@@ -230,11 +272,6 @@ section.icon-footer {
     display: flex;
     justify-content: space-between;
     margin: 40px 0px 0px;
-  }
-  .left-nav-bar,
-  .rigth-nav-bar {
-    display: flex;
-    gap: 1rem;
   }
   .descripcion {
     visibility: visible;

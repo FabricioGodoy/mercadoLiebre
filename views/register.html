@@ -49,25 +49,29 @@
     
     <form action="/registroUsuario" method="post" class="formularioCrearUsiario">
         <div class="contenedorFormularioUsuarios">
+            <label>Nombre y apellido:</label>
             <input type="text" name="nombreYApellido" class="formNombreApellido" placeholder="Nombre y apellido"
                 required>
         </div>
         <div class="contenedorFormularioUsuarios">
+            <label>Nombre de Usuario:</label>
             <input type="text" name="nombreDeUsuario" class="formNombreDeUsuario" placeholder="Nombre de Usuario"
                 required>
         </div>
         <div class="contenedorFormularioUsuarios">
+            <label>Fecha de nacimiento:</label>
             <input type="date" name="fechaDeNac" class="formFechaDeNac" placeholder="Fecha de nacimiento." required>
         </div>
         <div class="contenedorFormularioUsuarios">
+            <label>Domicilio:</label>
             <input type="text" name="domicilio" class="formDomicilio" placeholder="Domicilio" required>
         </div>
-        <div>
-            <label class="tipoDeUsuario">¿Que le gustaría hacer en la plataforma? </label>
+        <div class="contenedorFormularioUsuariosCheckbox">
+            <label>¿Que le gustaría hacer en la plataforma? </label>
             <input type="radio" name="VendedorComprador" value="comprador"> Comprar.
             <input type="radio" name="VendedorComprador" value="vendedor"> Vender.
         </div>
-        <div class="contenedorFormularioUsuarios">
+        <div class="contenedorFormularioUsuariosCheckbox">
             <label>Categorías de interes:</label>
             <input type="checkbox" name="hogar" value="hogar" class="intereses">Hogar
             <input type="checkbox" name="electro" value="electro" class="intereses">Electro
@@ -75,21 +79,23 @@
             <input type="checkbox" name="jugueteria" value="jugueteria" class="intereses">Jugueteria
             <input type="checkbox" name="vidaSana" value="vidaSana" class="intereses">Vida sana
         </div>
-        <div class="contenedorFormularioUsuarios">
+        <div class="contenedorFormularioUsuariosFoto">
             <label>Selecioná una foto de perfil.</label>
             <input type="file" name="fotoUsuario" accept=".jpg, .png">
         </div>
         <div class="contenedorFormularioUsuarios">
+            <label>Contraseña:</label>
             <input type="password" name="password" class="formPassword" placeholder="Contraseña" required>
         </div>
         <div class="contenedorFormularioUsuarios">
+            <label>Confirmar contraseña:</label>
             <input type="password" name="password" class="formPassword" placeholder="Confirmar contraseña" required>
         </div>
-        <button type="reset" class="botonFormUsuario">Borrar</button>
         <button type="submit" class="botonFormUsuario">Enviar</button>
+        <button type="reset" class="botonFormUsuario">Borrar</button>
 
     </form>
-    */
+
     <footer>
         <section class="icon-footer">
             <i class="fas fa-credit-card"></i>
