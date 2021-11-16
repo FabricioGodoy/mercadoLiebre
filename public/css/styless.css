@@ -123,6 +123,7 @@ nav ul li a {
 .contenedorFormularioLogin input {
   width: 50vw;
   border-radius: none;
+  max-width: 400px;
 }
 .contenedorFormularioUsuarios input:focus,
 .contenedorFormularioLogin input:focus {
