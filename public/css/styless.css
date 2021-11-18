@@ -5,10 +5,16 @@
 }
 body {
   background-color: #9e9e9e0f;
+
 }
 header {
   background-color: #eac926;
-  padding: 10px 15px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+ 
 }
 p {
   font-family: "Roboto", sans-serif;
@@ -25,6 +31,7 @@ h2 {
   flex-wrap: wrap;
   align-items: center;
   margin: 5px;
+
 }
 
 .logo,
@@ -99,7 +106,6 @@ nav ul li a {
   padding: 7px;
   border-radius: 3px;
 }
-
 .formularioCrearUsiario,
 .formularioInicioSesion {
   padding: 5px 10px;
@@ -107,8 +113,8 @@ nav ul li a {
   border: 3px solid #eac926;
   background-color: #ebebeb;
   width: 100vw;
+  margin-top: 160px;
 }
-
 .contenedorFormularioUsuarios,
 .contenedorFormularioLogin,
 .contenedorFormularioUsuariosCheckbox,
@@ -157,16 +163,25 @@ nav ul li a {
   justify-content: center;
   margin: 5px auto;
 }
+.botonFormUsuario:hover{
+  background-color: #0022AA;
+}
 
 .contenedor {
-  padding: 10px;
-  margin: auto;
+  padding: auto;
   width: 90%;
+  margin-top: 160px;
+  
+}
+.banner {
+  margin: center;
 }
 .recomendadados {
+  
   margin: 20px 0px;
 }
 .producto {
+  position: relative;
   margin-top: 10px;
   border-radius: 5px;
 }
@@ -175,25 +190,32 @@ nav ul li a {
   display: block;
 }
 .info-producto {
+  position: relative;
   border-top: 1px solid #ebebeb;
   padding: 5px;
   background-color: #fff;
-  position: relative;
   border-radius: 0 0 5px 5px;
 }
 .info-producto i {
-  display: block;
-  font-size: 16px;
-  padding: 5px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #39b54a;
-  background-color: #fff;
-  border-radius: 50%;
-  position: absolute;
-  right: 20px;
-  top: -15px;
+display: block;
+font-size: 16px;
+padding: 5px;
+width: 30px;
+height: 30px;
+border: 1px solid #39b54a;
+background-color: #FFF;
+border-radius: 50%;
+position: absolute;
+right: 20px;
+top: -15px;
+z-index: 9;
+transition: all 500ms;
 }
+.info-producto i:hover {
+  transform: rotateZ(-90deg)
+}
+
+
 .info-precio {
   margin: 1rem 0;
   display: flex;
@@ -207,12 +229,30 @@ nav ul li a {
   font-size: 16px;
   color: #39b54a;
 }
+
+
 .descripcion {
   display: none;
+  justify-content:center;
+  align-items:center;
+  opacity: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  margin: 0px 0px 20px 0px;
+  padding: 15px;
+  position: absolute;
+  background-color:black;
+  color:white;
+  width:100%;
+  height: 100%;
+  bottom: 0px;
+  left: 0px; 
 }
+.producto:hover .descripcion{ 
+
+  opacity: 1;
+}
+
+
 footer {
   text-align: center;
   padding: 10px 20px;
@@ -222,13 +262,16 @@ p {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
 }
-section.icon-footer {
+.icon-footer {
   margin: 20px 0px;
 }
 .icon-footer i {
   margin-bottom: 10px;
   color: #1259c3;
   font-size: 2em;
+}
+.icon-footer i:hover{
+  color: #03264C;
 }
 
 @media (min-width: 361px) {
@@ -240,7 +283,10 @@ section.icon-footer {
   }
   .producto {
     width: 45%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
+  }
+  .producto:hover{
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
   }
   .descripcion {
     display: flex;
@@ -288,4 +334,12 @@ section.icon-footer {
   .producto {
     width: 23%;
   }
+}
+footer{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.icon-footer{
+  width: 100%;
 }
