@@ -11,10 +11,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="/css/styless.css" rel="stylesheet">
     <title>Mercado Liebre</title>
+    <script src="/scripts/validaciones.js" defer></script>
 </head>
 
 <body>
-    <header>    
+    <header>
         <div class="nav-top-bar">
             <a href="/">
                 <section class="logo">
@@ -48,21 +49,24 @@
             </div>
         </nav>
     </header>
-    <form action="/inicioSesion" method="post" class="formularioInicioSesion">
-        <div class="contenedorFormularioLogin">
-            <label>Nombre de usuario:</label>
-            <input type="text" name="usuario" placeholder="Nombre de usuario" required>
-            <span class="feedback"></span>
-        </div>
-        <div class="contenedorFormularioLogin">
-            <label>Contraseña:</label>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <span class="feedback"></span>
-        </div>
+    <main>
+        <form action="/login" method="post" class="formularioInicioSesion" onsubmit="return validarFormulario()"
+            name="loginForm">
+            <div class="contenedorFormularioLogin">
+                <label>Nombre de usuario:</label>
+                <input type="text" name="usuario" placeholder="Nombre de usuario">
+                <span class="feedback"></span>
+            </div>
+            <div class="contenedorFormularioLogin">
+                <label>Contraseña:</label>
+                <input type="password" name="pass" placeholder="Contraseña">
+                <span class="feedback"></span>
+            </div>
 
-        <button type="submit" class="botonFormUsuario">Enviar</button>
+            <button type="submit" class="botonFormUsuario">Enviar</button>
 
-    </form>
+        </form>
+    </main>
     <footer>
         <section class="icon-footer">
             <i class="fas fa-credit-card"></i>

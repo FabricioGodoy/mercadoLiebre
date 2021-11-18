@@ -4,10 +4,6 @@ const path = require("path");
 const port = 3000;
 app.use(express.static("public"));
 
-app.listen(port, () => {
-  console.log(`escuchando en http://localhost:${port}`);
-});
-
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + "/views/home.html"));
 });
@@ -18,4 +14,12 @@ app.get("/register", (req, res) => {
 
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname + "/views/login.html"));
+});
+
+app.post("/login", (req, res) => {
+  res.sendFile(path.join(__dirname + "/views/home.html"));
+});
+
+app.listen(port, () => {
+  console.log(`escuchando en http://localhost:${port}`);
 });
