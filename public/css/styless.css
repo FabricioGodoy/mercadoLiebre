@@ -167,11 +167,9 @@ nav ul li a {
 .contenedor {
   padding: auto;
   width: 100%;
-  margin-top: 160px;
+  margin-top:30vh;
 }
-.banner {
-  margin: center;
-}
+
 .recomendadados {
   margin: 20px 0px;
 }
@@ -267,6 +265,7 @@ p {
   text-decoration: underline;
 }
 @media (min-width: 361px) {
+  
   .nav-top-bar {
     justify-content: space-between;
   }
