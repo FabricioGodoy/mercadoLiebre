@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 3000;
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
@@ -19,7 +18,10 @@ app.get("/login", (req, res) => {
 app.post("/login", (req, res) => {
   res.sendFile(path.join(__dirname + "/views/home.html"));
 });
-
+/*
 app.listen(port, () => {
   console.log(`escuchando en http://localhost:${port}`);
-});
+});*/
+app.listen(process.env.PORT || 4000, ()=>{
+  console.log('Servidor funcionando');
+})
