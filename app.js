@@ -22,6 +22,6 @@ app.post("/login", (req, res) => {
 app.listen(port, () => {
   console.log(`escuchando en http://localhost:${port}`);
 });*/
-app.listen(process.env.PORT || 4000, ()=>{
-  console.log('Servidor funcionando');
+app.listen(process.env.PORT || 3000, ()=>{
+  console.log('Servidor corriendo en el puerto 3000');
 })
